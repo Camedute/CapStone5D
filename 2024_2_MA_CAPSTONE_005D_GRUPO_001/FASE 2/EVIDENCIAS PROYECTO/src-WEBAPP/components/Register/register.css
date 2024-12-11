@@ -1,0 +1,138 @@
+/* Fondo para la página de registro */
+html.register-background, body.register-background {
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+html.register-background::before, body.register-background::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Imagenes/Negocio.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+html.register-background::after, body.register-background::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.6); /* Fondo más azul */
+    z-index: -1;
+}
+
+/* Estilos del formulario de registro */
+.register-container {
+    width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.75); /* Más translucidez */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+/* Título del contenedor */
+.titleCaballeroMarket {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #007bff; /* Azul */
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Subtítulo */
+.subtitleCaballeroMarket {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo de la cuadrícula del formulario */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Estilo de los cuadros de texto (inputs) */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+/* Estilo cuando el input tiene el foco */
+.form-control:focus {
+    border-color: #007bff; /* Azul */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botón de registro */
+.btn {
+    width: calc(100% - 20px);
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Mensajes de error */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Botón de regresar */
+.botonRegresar {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botonRegresar:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

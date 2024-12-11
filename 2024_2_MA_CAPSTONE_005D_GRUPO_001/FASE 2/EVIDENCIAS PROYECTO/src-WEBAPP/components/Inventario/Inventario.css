@@ -1,0 +1,144 @@
+/* Contenedor de los botones dentro del modal */
+button-container {
+  display: flex;
+  justify-content: space-between;  /* Alinea los botones a los extremos */
+  gap: 10px;  /* Espacio entre los botones */
+  margin-top: 15px;  /* Añadir algo de espacio en la parte superior */
+}
+
+/* Modal de agregar y editar productos */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 400px;  /* Reducir el ancho del formulario */
+  max-width: 90%;
+  transition: transform 0.3s ease;
+}
+
+input {
+  width: 100%;
+  padding: 8px;  /* Reducir el padding de los campos de entrada */
+  margin: 10px 0;  /* Reducir el margen entre campos */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;  /* Reducir el tamaño de la fuente */
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #357ABD;
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* Botones dentro del modal */
+button {
+  padding: 10px 20px;  /* Reducir el tamaño de los botones */
+  margin: 8px 5px;
+  background-color: #357ABD;  /* Cambiado a azul/celeste */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;  /* Reducir el tamaño de la fuente del botón */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2a5f87;  /* Cambiado a un tono más oscuro de azul/celeste */
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Estilo de los botones de cancelar y agregar */
+button.cancel {
+  background-color: #357ABD;  /* Cambiado a azul/celeste */
+}
+
+button.cancel:hover {
+  background-color: #2a5f87;  /* Cambiado a un tono más oscuro de azul/celeste */
+}
+
+/* Diseño de los productos */
+.producto-box {
+  background-color: rgba(255, 255, 255, 0.8);  /* Fondo blanco translúcido */
+  padding: 15px;  /* Reducir el padding de los productos */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.producto-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto-box img {
+  width: 100%;
+  height: 150px;  /* Reducir la altura de la imagen */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.producto-info {
+  margin-top: 10px;
+}
+
+.producto-info p {
+  margin: 5px 0;
+}
+
+.producto-nombre {
+  font-size: 1.1rem;  /* Reducir el tamaño de la fuente */
+  font-weight: bold;
+}
+
+.action-button {
+  background-color: #357ABD;  /* Cambiado a azul/celeste */
+  color: white;
+  padding: 10px 20px;  /* Reducir el tamaño del botón */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;  /* Reducir el tamaño de la fuente */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #2a5f87;  /* Cambiado a un tono más oscuro de azul/celeste */
+  transform: scale(1.05);
+}
+
+/* Modificación para dividir el formulario en 2 columnas */
+.form-container {
+  display: grid;  /* Usar grid en lugar de flex */
+  grid-template-columns: 1fr 1fr;  /* Dos columnas de igual tamaño */
+  gap: 20px;  /* Espacio entre las columnas */
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+}

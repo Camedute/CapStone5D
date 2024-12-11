@@ -1,0 +1,145 @@
+/* Fondo para la página de login */
+html.login-background, body.login-background {
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+html.login-background::before, body.login-background::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Imagenes/Negocio.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+html.login-background::after, body.login-background::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.6); /* Fondo azul más fuerte */
+    z-index: -1;
+}
+
+/* Contenedor principal con fondo y centrado */
+.main-containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent; /* Fondo transparente para mostrar la imagen */
+}
+
+/* Contenedor del formulario de inicio de sesión */
+.login-container {
+    width: 400px; /* Ajusta el tamaño del contenedor */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    text-align: center;
+}
+
+/* Título del contenedor */
+.title-containerLogin h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3c78c8;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Campos del formulario */
+.form-containerLogin {
+    display: flex;
+    flex-direction: column; /* Apilar los elementos */
+    align-items: center; /* Centrar horizontalmente */
+    gap: 15px; /* Espaciado entre los elementos */
+    margin-top: 20px;
+}
+
+/* Cada campo de entrada */
+.form-controlLogin {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 350px; /* Máximo ancho para inputs */
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-controlLogin::placeholder {
+    color: #aaa;
+}
+
+.form-controlLogin:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Enlace para restablecer la contraseña */
+.login-container a {
+    display: block;
+    margin-top: 5px;
+    color: #007bff;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Contenedor de botones */
+.button-containerLogin {
+    display: flex;
+    flex-direction: column; /* Botones en columna */
+    gap: 10px; /* Reducir el espacio entre los botones */
+    margin-top: 20px;
+    justify-content: center; /* Centrar los botones verticalmente */
+    align-items: center; /* Alinear los botones horizontalmente */
+}
+
+/* Estilo de botones */
+.button-57Login {
+    width: 80%; /* Reducir el ancho de los botones para que sean más angostos */
+    max-width: 300px; /* Máximo ancho más pequeño */
+    padding: 8px; /* Reducir el padding */
+    font-size: 1rem; /* Reducir el tamaño de la fuente */
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-57Login:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Mensaje de error */
+.error-messageLogin {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: center;
+}
